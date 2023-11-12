@@ -1,0 +1,272 @@
+/* IMPORT */
+
+
+
+/* NORMALIZE */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    /* FUENTES */
+    --font-title: 'Times New Roman', Times, serif;
+    --font-text:Arial,sans-serif;
+
+    /* COLORES */
+    --white-color: white;
+    --black-color: black;
+    --footer-color: #545454;
+}
+
+/* HEADER */
+header{
+    height: min-content;
+    background-color: var(--white-color);
+    border-bottom: solid rgba(128, 128, 128, 0.985) 1px;
+}
+
+.header-superior{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px 20px 0; 
+
+    border-bottom: solid 0.5px rgba(128, 128, 128, 0.347);   
+}
+
+.header-inferior{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px ;
+    font-family: var(--font-text);
+}
+
+.service-portal{   
+    font-weight: lighter;
+}
+
+.opciones-iconos{
+    display: flex;
+    flex-flow:wrap row;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.opciones-iconos a{
+    gap: 2px;
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.opciones-header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 10px;
+    margin-right: 50px;
+
+    font-family: var(--font-text);
+    font-size: large;
+}
+
+.iconos-header{
+    font-size: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.iconos-header img{
+    width: 40px;
+    height: 40px;
+}
+
+/* MAIN */
+
+main{
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* SUPERIOR MAIN */
+
+.superior-main{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content:center;
+
+    height: min-content;
+    padding: 50px 0;
+
+    background-color: #001c3e;
+    color: var(--white-color);
+
+
+    border-bottom:   11px solid #ff4f4f;
+}
+
+.superior-main h2{
+    font-family: var(--font-text);
+    font-size: 25px;
+    font-weight: 25px;
+}
+
+.superior-main a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: var(--font-text);
+    font-size: large;
+    font-weight: lighter;
+
+}
+
+
+.iconos-main{
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-size: 100px;
+    color: #ff4f4f;
+}
+
+.segundo-main-superior{
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap:15px;
+
+    width: 45%;
+    height: min-content;
+    margin: 0px 20px;
+    border-right: 1px solid var(--white-color);
+}
+
+.busqueda-con-texto{
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    justify-content: center;
+    border: var(--black-color) 1px solid;
+    width: 95%;
+}
+
+.busqueda-con-texto input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: larger;
+    padding-left: 15px;
+}
+
+.busqueda-con-texto i{
+    display: flex;
+    align-items: center;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    width: 40px;
+    height: 40px;
+}
+
+.link-segundo-main{
+    border-right: var(--white-color) 1px solid; 
+    padding: 0 12px;
+    margin-right: 12px;
+
+}
+
+.tercer-main-superior{
+    display: flex;
+    flex-flow: column wrap;
+
+    padding-left: 20px;
+    row-gap: 15px;
+
+}
+
+.caja-tercer-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid white 1px;
+    
+    height: 40px;
+    width: 80%;
+    
+}
+
+.tercer-main-superior i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-left: white solid 1px;
+    
+}
+
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-flow: column wrap ;
+    align-items:left;
+    padding: 15px 40px;
+    gap: 15px;
+
+    height: min-content;
+    width: 100%;
+    background-color: var(--footer-color);
+
+    line-height: 1.5;
+    color: var(--white-color);
+    font-family: var(--font-text);
+}
+
+
+.aditional{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    justify-content: space-evenly;
+    margin-left: 5%;
+}
+
+.aditional div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 165px;
+
+}
+
+.aditional a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight:lighter;
+}
+
+.aditional a:hover, .opciones-header a:hover{
+    text-decoration: underline;
+}
+
+
+.aditional p{
+    font-weight:700;
+}
+
+.final-footer{
+    margin-top: 50px;
+    margin-left: 8%;
+    margin-bottom: 5%;
+}
