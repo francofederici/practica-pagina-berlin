@@ -40,8 +40,10 @@ header{
 .header-inferior{
     display: flex;
     flex-flow: row wrap;
+    row-gap: 10px;
     justify-content: space-between;
     align-items: center;
+    
 
     margin: 20px ;
     font-family: var(--font-text);
@@ -53,9 +55,8 @@ header{
 
 .opciones-iconos{
     display: flex;
-    flex-flow:wrap row;
-    justify-content: space-between;
-    align-items: center;   
+    flex-flow:wrap ;
+    row-gap: 10px;
 }
 
 .opciones-iconos a{
@@ -97,67 +98,72 @@ main{
     background-color: #f5f5f5;
 }
 
+/* cambio un poquito para atras */
+
 /* SUPERIOR MAIN */
 
-.superior-main{
+.container-superior-main{
     display: flex;
-    flex-flow: wrap row;
-    justify-content:center;
-
+    flex-flow: wrap;
     height: min-content;
+    width: 100wh;
     padding: 50px 0;
 
-    background-color: #001c3e;
     color: var(--white-color);
-
-
+    background-color: #001c3e;
     border-bottom:   11px solid #ff4f4f;
 }
 
-.superior-main h2{
+.container-superior-main h2{
     font-family: var(--font-text);
     font-size: 25px;
     font-weight: 25px;
 }
 
-.superior-main a{
+.container-superior-main a{
     color: var(--white-color);
     text-decoration: none;
     font-family: var(--font-text);
     font-size: large;
     font-weight: lighter;
-
 }
 
 
-.iconos-main{
-
+.iconos-superior-main{
     display: flex;
-    justify-content: left;
-    align-items: center;
-
+    align-items:center;
     font-size: 100px;
     color: #ff4f4f;
 }
 
+.sub-container-superior-main{
+    display: flex;
+    flex-flow: wrap;
+    row-gap: 15px;
+    width: 80%;
+
+
+}
+
 .segundo-main-superior{
     display: flex;
-    flex-flow: nowrap column;
+    flex-flow: wrap column;
     row-gap:15px;
-
-    width: 45%;
     height: min-content;
-    margin: 0px 20px;
+    width: 55%;
+    margin-left: 20px;
+    padding-right: 20px;
+
     border-right: 1px solid var(--white-color);
 }
 
 .busqueda-con-texto{
     display: flex;
-    flex-flow: nowrap row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: var(--black-color) 1px solid;
-    width: 95%;
+    height: min-content;
+    width: 100%;
 }
 
 .busqueda-con-texto input{
@@ -171,24 +177,24 @@ main{
 .busqueda-con-texto i{
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--black-color);
     background-color: var(--white-color);
     width: 40px;
     height: 40px;
 }
 
-.link-segundo-main{
-    border-right: var(--white-color) 1px solid; 
-    padding: 0 12px;
-    margin-right: 12px;
+.links-segundo-main{
+    display: flex;
+    flex-flow: nowrap;
+    gap: 20px;
 
 }
 
 .tercer-main-superior{
     display: flex;
+    margin-left: 20px;
     flex-flow: column wrap;
-
-    padding-left: 20px;
     row-gap: 15px;
 
 }
@@ -197,10 +203,11 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
     border: solid white 1px;
-    
-    height: 40px;
-    width: 80%;
+
+    height: min-content;
+    width: 85%;
     
 }
 
@@ -269,4 +276,80 @@ footer{
     margin-top: 50px;
     margin-left: 8%;
     margin-bottom: 5%;
+}
+
+
+@media screen and (max-width: 480px){
+
+    .container-superior-main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+
+    .segundo-main-superior{
+
+        width: 100%;
+        border: none;
+    }
+
+    .tercer-main-superior{
+        width: 100%;
+    }
+
+
+    .opciones-header{
+        margin-right: 0;
+    }
+
+    .opciones-iconos{
+        display:flex;
+        flex-direction: column;
+    }
+        
+    .iconos-superior-main{
+        font-size: 60px;
+    }
+
+    .sub-container-superior-main{
+        width: 100%;
+    }
+
+}
+
+
+
+@media (min-width:481px) and (max-width:768px){
+
+    .container-superior-main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .sub-container-superior-main{
+        width: 100%;
+    }
+
+    .segundo-main-superior{
+        width: 100%;
+        border: none;
+    }
+
+    .tercer-main-superior{
+        width: 100%;
+    }
+
+    .opciones-header{
+        margin-right: 0;
+    }
+
+    .opciones-iconos{
+        display:flex;
+        flex-direction: column;
+    }
+
 }
