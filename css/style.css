@@ -44,7 +44,6 @@ header{
     justify-content: space-between;
     align-items: center;
     
-
     margin: 20px ;
     font-family: var(--font-text);
 }
@@ -188,7 +187,14 @@ main{
     display: flex;
     flex-flow: nowrap;
     gap: 20px;
+}
 
+.links-segundo-main a:nth-child(1):hover{
+    text-decoration: underline;
+}
+
+.links-segundo-main a:nth-child(2):hover{
+    text-decoration: underline;
 }
 
 .tercer-main-superior{
@@ -251,7 +257,7 @@ footer{
 
 .aditional div{
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     gap: 5px;
     width: 165px;
 
@@ -261,6 +267,7 @@ footer{
     color: var(--white-color);
     text-decoration: none;
     font-weight:lighter;
+    
 }
 
 .aditional a:hover, .opciones-header a:hover{
@@ -279,8 +286,21 @@ footer{
 }
 
 
+/* MEDIAQUERY */
+
 @media screen and (max-width: 480px){
 
+    /* HEADER */
+    .opciones-header{
+        margin-right: 0;
+    }
+
+    .opciones-iconos{
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* MAIN */
     .container-superior-main{
         display: flex;
         align-items: center;
@@ -288,9 +308,15 @@ footer{
         padding: 20px;
     }
 
+    .sub-container-superior-main{
+        width: 100%;
+    }
+
+        .iconos-superior-main{
+        font-size: 60px;
+    }
 
     .segundo-main-superior{
-
         width: 100%;
         border: none;
     }
@@ -300,21 +326,18 @@ footer{
     }
 
 
-    .opciones-header{
-        margin-right: 0;
+    /* FOOTER */
+
+    .aditional {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
     }
 
-    .opciones-iconos{
-        display:flex;
-        flex-direction: column;
-    }
-        
-    .iconos-superior-main{
-        font-size: 60px;
-    }
-
-    .sub-container-superior-main{
-        width: 100%;
+    .aditional div{
+        display: flex;
+        justify-content: center;
+        width: 140px;
     }
 
 }
@@ -323,6 +346,18 @@ footer{
 
 @media (min-width:481px) and (max-width:768px){
 
+    /* HEADER */
+    .opciones-header{
+        margin-right: 0;
+    }
+
+    .opciones-iconos{
+        display:flex;
+        flex-direction: column;
+    }
+
+
+    /* MAIN */
     .container-superior-main{
         display: flex;
         align-items: center;
@@ -342,14 +377,4 @@ footer{
     .tercer-main-superior{
         width: 100%;
     }
-
-    .opciones-header{
-        margin-right: 0;
-    }
-
-    .opciones-iconos{
-        display:flex;
-        flex-direction: column;
-    }
-
 }
